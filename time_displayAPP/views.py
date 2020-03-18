@@ -6,7 +6,9 @@ def index(request):
         'fullDate' : strftime('%B %d, %Y', gmtime()),
         'time' : strftime('%I:%M %p', gmtime())
         }
-    # return HttpResponse(strftime('%Y-%m-%d %H:%M %p', gmtime()))
+    # x = context['fullDate']
+    # y = context['time']
+    # return HttpResponse(f'Date: {x} Time: {y}')
     return render(request, 'index.html', context)
 
 # Example from couse materials in the next section on GET/POST
